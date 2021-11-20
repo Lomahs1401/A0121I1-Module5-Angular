@@ -1,0 +1,19 @@
+<h1>Color picker:</h1>
+<div>
+  <table>
+    <thead></thead>
+    <tbody>
+      <tr>
+        <td>
+          <label for="color"><strong>Choose your favorite color:</strong></label>
+        </td>
+        <td>
+          <input type="color" title="color" id="color" [(ngModel)]="colorText"/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <h2 [ngStyle]="{'color': colorText}">Colorful Text Example</h2>
+</div>

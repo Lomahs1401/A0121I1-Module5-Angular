@@ -1,0 +1,44 @@
+<h1>Welcome to simple calculator</h1>
+<div>
+  <table>
+    <thead></thead>
+    <tbody>
+      <tr>
+        <td>
+          <label for="firstOperand"><strong>First Operand: </strong></label>
+        </td>
+        <td>
+          <input type="number" title="Enter first operand" id="firstOperand" placeholder="First operand"
+            class="form-inline" [(ngModel)]="firstOperand" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="operator"><strong>Operator: </strong> </label>
+        </td>
+        <td>
+          <select id="operator" class="form-inline" [(ngModel)]="operator">
+            <option value="+" selected="selected">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="secondOperand"><strong>Second Operand: </strong></label>
+        </td>
+        <td>
+          <input type="number" title="Enter second operand" id="secondOperand" placeholder="Second operand"
+            class="form-inline" [(ngModel)]="secondOperand" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <button class="btn btn-primary" (click)="calculate()">Calculate!</button>
+  <h1 *ngIf="exception === 'error'" style="color: red;">Can not divide to zero!</h1>
+  <h1 *ngIf="exception !== 'error'">Result: {{result}}</h1>
+</div>
