@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hackernews</title>
+</head>
+
+<body>
+  <app-navbar></app-navbar>
+  <h2
+    style="text-align: center; background-color: rgba(4, 16, 143, 0.5); font-size: 40px; font-weight: bolder; color: white;">
+    Today's article</h2>
+  <hr>
+  <div *ngFor="let art of articles">
+    <a href="{{art.url}}" target="_blank">{{art.title}}</a>
+  </div>
+  <div>
+    <textarea [value]="article.title" #title cols="70" id="article-title"></textarea>
+    <textarea [value]="article.url" #url cols="70" id="article-url"></textarea>
+  </div>
+  <input (click)="updateArticle(title.value, url.value)" type="button" value="Update" class="btn btn-success">
+  <div>
+    <app-likes></app-likes>
+  </div>
+  <app-footer></app-footer>
+</body>
+
+</html>
