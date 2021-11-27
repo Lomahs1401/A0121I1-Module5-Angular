@@ -12,9 +12,6 @@
     *ngIf="registerForm.get('email')?.invalid && (registerForm.get('email')?.dirty || registerForm.get('email')?.touched)">
     Invalid Email!
   </div>
-  <!-- <div class="alert alert-danger" role="alert" *ngIf="!email?.valid && (email?.dirty || email?.touched)">
-    <p style="color: red">Invalid Email!</p>
-  </div> -->
   <div class="form-group row">
     <label class="col" for="password"><strong>Password: </strong>
       <input class="form-control" id="password" type="text" placeholder="Enter password" name="password"

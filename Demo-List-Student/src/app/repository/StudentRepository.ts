@@ -1,0 +1,31 @@
+import { Student } from './../model/Student';
+export const studentRepo: Student[] = [
+  {
+    id : 1,
+    name : 'Nguyen Khac Thai',
+    age : 19,
+    mark : 7,
+    avatar : "https://cdn.icon-icons.com/icons2/2643/PNG/512/male_boy_person_people_avatar_icon_159358.png"
+  },
+  {
+    id : 2,
+    name : 'Ngo Duc Quoc Khanh',
+    age : 19,
+    mark : 5,
+    avatar : "https://icon-library.com/images/avatar-icon-images/avatar-icon-images-4.jpg"
+  },
+  {
+    id : 3,
+    name : 'Le Hoang Long',
+    age : 19,
+    mark : 7,
+    avatar : "https://www.hpsystems.com.tr/tema/genel/uploads/ekibimiz/vote_1.png"
+  },
+  {
+    id : 4,
+    name : 'Nguyen Trong Nghia',
+    age : 20,
+    mark : 9,
+    avatar : "https://englishworks.vn/public//site/lib/images/noavatar.png"
+  }
+]
