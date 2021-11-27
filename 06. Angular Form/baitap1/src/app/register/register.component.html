@@ -1,0 +1,57 @@
+<img src="/assets/Angular_logo.png" alt="Angular_Logo" width="300px" height="300px"
+  style="display: block; margin: 0 auto;">
+<h1 style="text-align: center;">User registration</h1>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="col-md-6 offset-md-3" novalidate>
+  <div class="form-group row">
+    <label class="col" for="email"><strong>Email: </strong>
+      <input class="form-control" id="email" type="email" placeholder="Enter email" name="email"
+        formControlName="email" />
+    </label>
+  </div>
+  <div class="alert alert-danger" role="alert"
+    *ngIf="registerForm.get('email')?.invalid && (registerForm.get('email')?.dirty || registerForm.get('email')?.touched)">
+    Invalid Email!
+  </div>
+  <!-- <div class="alert alert-danger" role="alert" *ngIf="!email?.valid && (email?.dirty || email?.touched)">
+    <p style="color: red">Invalid Email!</p>
+  </div> -->
+  <div class="form-group row">
+    <label class="col" for="password"><strong>Password: </strong>
+      <input class="form-control" id="password" type="text" placeholder="Enter password" name="password"
+        formControlName="password" />
+    </label>
+  </div>
+  <div class="form-group row">
+    <label class="col" for="confirm-password"><strong>Confirm password: </strong>
+      <input class="form-control" id="confirm-password" type="text" placeholder="Enter password again"
+        name="confirm-password" formControlName="confirm-password" />
+    </label>
+  </div>
+  <div class="form-group row">
+    <label class="col" for="country"><strong>Country: </strong>
+      <select id="country" name="country" formControlName="country">
+        <option [ngValue]="c" *ngFor="let c of countryList"></option>
+      </select>
+    </label>
+  </div>
+  <div class="form-group row">
+    <label class="col" for="age"><strong>Age: </strong>
+      <input class="form-control" id="age" type="number" placeholder="Enter age" formControlName="age">
+    </label>
+  </div>
+  <div class="form-group row">
+    <label class="col" for="gender"><strong>Gender: </strong>
+      <input type="radio" value="male" name="gender" formControlName="gender">Male
+      <input type="radio" value="female" id="gender" name="gender" formControlName="gender">Female
+    </label>
+  </div>
+  <div class="form-group row">
+    <label class="col" for="phone"><strong>Phone: </strong>
+      <input class="form-control" id="phone" type="text" placeholder="Phone number" name="phone"
+        formControlName="phone">
+    </label>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit" >Submit!</button>
+  </div>
+</form>
