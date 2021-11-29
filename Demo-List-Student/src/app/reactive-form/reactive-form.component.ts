@@ -1,6 +1,8 @@
 import { studentRepo } from './../repository/StudentRepository';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { StudentService } from '../service/student.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reactive-form',
@@ -11,7 +13,8 @@ export class ReactiveFormComponent implements OnInit {
 
   studentForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private studentService: StudentService,
+    private router: Router) {
 
   }
 
@@ -26,6 +29,11 @@ export class ReactiveFormComponent implements OnInit {
   }
 
   getStudentForm() {
-    studentRepo.push(this.studentForm.value);
+    // studentRepo.push(this.studentForm.value);
+    if(this.studentForm.valid) {
+      this.studentService.addStudent(this.studentForm.value);
+      this.router.navigateByUrl('/');
+    }
+
   }
 }

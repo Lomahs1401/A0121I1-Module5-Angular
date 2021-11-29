@@ -1,3 +1,4 @@
+import { StudentService } from './../service/student.service';
 import { Student } from './../model/Student';
 import { Component, OnInit } from '@angular/core';
 import { studentRepo } from '../repository/StudentRepository';
@@ -9,13 +10,14 @@ import { studentRepo } from '../repository/StudentRepository';
 })
 export class StudentListComponent implements OnInit {
 
-  students = studentRepo;
+  students: Student[];
   student: any;
   id: number;
 
-  constructor() { }
+  constructor(private studentService: StudentService) { }
 
   ngOnInit(): void {
+    this.students = this.studentService.getAllStudents();
   }
 
   getStudentById(studentId: string): Student {

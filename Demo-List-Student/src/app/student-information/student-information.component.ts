@@ -1,6 +1,6 @@
-import { studentRepo } from './../repository/StudentRepository';
+import { StudentService } from './../service/student.service';
 import { Component, Input, OnInit } from '@angular/core';
-import { Student } from '../model/Student';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-student-information',
@@ -13,11 +13,22 @@ export class StudentInformationComponent implements OnInit {
 
   @Input('studentInfo')
   student: any='';
+  id: string | null;
 
-  constructor() { }
+  constructor(private activeRouter: ActivatedRoute, private studentService: StudentService) { }
 
   ngOnInit(): void {
-    console.log(this.student);
+    // cach 1
+    this.activeRouter.paramMap.subscribe(
+      (paramMap: ParamMap) => {
+        this.id = paramMap.get('id');
+        this.student = this.studentService.getById(Number(this.id));
+      }
+    )
+
+    // cach2
+    // let id = this.activeRouter.snapshot.params['id'];
+    // this.student = this.studentService.getById(id);
   }
 
   // setMark(event : Event) {
