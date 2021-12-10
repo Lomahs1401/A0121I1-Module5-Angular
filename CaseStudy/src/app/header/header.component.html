@@ -1,0 +1,76 @@
+<header class="header">
+  <div class="header-top">
+      <div class="header-top-left">
+          <img src="assets/image/logo.png" alt="Logo Furama Resort"/>
+      </div>
+      <div class="header-top-middle">
+          <h1>CHÀO MỪNG ĐẾN VỚI ĐÀ NẴNG FURAMA RESORT</h1>
+      </div>
+      <div class="header-top-right">
+          <ul>
+              <li>
+                  <a href="#">EN</a>
+              </li>
+              <li>
+                  <a href="#">VI</a>
+              </li>
+              <li>
+                  <a href="#">JP</a>
+              </li>
+              <li>
+                  <a href="#">KR</a>
+              </li>
+              <li>
+                  <a href="#">RU</a>
+              </li>
+              <li>
+                  <a href="#">CN</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <nav class="nav navbar-expand-md justify-content-around">
+      <a class="navbar-brand" href="#">
+          <img src="assets/image/popup-Furama-01.png" alt="Logo" style="width: 100px;"/>
+      </a>
+      <ul class="navbar-nav justify-content-between">
+          <li class="nav-item">
+              <h3>
+                  <a class="nav-link" [routerLink]="['']">Trang chủ</a>
+              </h3>
+          </li>
+          <li class="nav-item dropdown">
+              <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">Nhân Viên</button>
+              <div class="dropdown-menu">
+                  <a class="dropdown-item" [routerLink]="['']">Thêm Nhân Viên</a>
+                  <a class="dropdown-item" [routerLink]="['']">Danh Sách Nhân Viên</a>
+              </div>
+          </li>
+          <li class="nav-item dropdown">
+              <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">Khách Hàng</button>
+              <div class="dropdown-menu">
+                  <a class="dropdown-item" [routerLink]="['createCustomer']">Thêm Khách Hàng</a>
+                  <a class="dropdown-item" [routerLink]="['']">Danh Sách Khách Hàng</a>
+              </div>
+          </li>
+          <li class="nav-item dropdown">
+              <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">Dịch Vụ</button>
+              <div class="dropdown-menu">
+                  <a class="dropdown-item" [routerLink]="['']">Thêm Dịch Vụ</a>
+                  <a class="dropdown-item" [routerLink]="['']">Xem Danh Sách Dịch Vụ</a>
+              </div>
+          </li>
+          <li class="nav-item dropdown">
+              <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">Hợp Đồng</button>
+              <div class="dropdown-menu">
+                  <a class="dropdown-item" [routerLink]="['']">Thêm Hợp Đồng</a>
+                  <a class="dropdown-item" [routerLink]="['']">Xem Danh Sách Hợp Đồng</a>
+              </div>
+          </li>
+      </ul>
+      <form class="form-inline">
+          <input class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm"/>
+          <button class="btn btn-info" type="submit">Tìm Kiếm</button>
+      </form>
+  </nav>
+</header>

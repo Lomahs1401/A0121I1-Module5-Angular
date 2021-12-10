@@ -31,7 +31,7 @@ export class ReactiveFormComponent implements OnInit {
   getStudentForm() {
     // studentRepo.push(this.studentForm.value);
     if(this.studentForm.valid) {
-      this.studentService.addStudent(this.studentForm.value);
+      this.studentService.addStudent(this.studentForm.value).subscribe();
       this.router.navigateByUrl('/');
     }
 

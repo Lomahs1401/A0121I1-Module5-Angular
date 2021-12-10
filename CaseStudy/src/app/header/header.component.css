@@ -1,0 +1,104 @@
+.header-top {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.header-top-left {
+  display: flex;
+  flex: 1;
+}
+
+.header-top-left img {
+  display: block;
+  height: 100px;
+  width: auto;
+  margin: auto;
+}
+
+.header-top-middle {
+  display: flex;
+  flex: 3;
+}
+
+.header-top-middle h1 {
+  margin: auto;
+}
+
+.header-top-middle h1::selection {
+  background: #046056;
+  color: white;
+}
+
+.header-top-right {
+  display: flex;
+  flex: 1;
+}
+
+.header-top-right ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.header-top-right ul li {
+  list-style-type: none;
+  padding: 12px 16px;
+}
+
+.header-top-right ul li a {
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+}
+
+.header-top-right ul li a:hover {
+  color: #046056;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav {
+  background-color: #046056;
+}
+
+nav > a {
+  display: flex !important;
+}
+
+nav a img {
+  margin: auto;
+}
+
+nav ul li {
+  margin: auto;
+  padding: 0 16px;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.nav-link:hover {
+  color: white !important;
+  background: #067063;
+}
+
+.btn:hover {
+  background: #067063;
+}
+
+.dropdown-toggle {
+  background: #046056;
+  font-size: 28px;
+  border: none;
+  color: white;
+  box-shadow: none !important;
+}
+
+.dropdown-item:hover {
+  background: #046056;
+  color: white;
+  font-weight: bold;
+}

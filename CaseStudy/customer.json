@@ -1,0 +1,48 @@
+{
+  "listCustomers": [
+    {
+      "id": "KH001",
+      "customerType": "Diamond",
+      "customerName": "Ngo Duc Quoc Khanh",
+      "customerBirthday": "02/09/2001",
+      "customerGender": "Male",
+      "customerIdCard": "5291029502",
+      "customerPhoneNumber": "0905283912",
+      "customerEmail": "quockhanhlangling@gmail.com",
+      "customerAddress": "Nghe An"
+    },
+    {
+      "id": "KH-1234",
+      "customerType": "Platinum",
+      "customerName": "Lê Hoàng Long",
+      "customerBirthday": "2002-01-14",
+      "customerGender": "1",
+      "customerIdCard": "201844993",
+      "customerPhone": "0905395436",
+      "customerEmail": "lelong.ll32@gmail.com",
+      "customerAddress": "Đà Nẵng"
+    }
+  ],
+  "customerTypes": [
+    {
+      "value": "Diamond",
+      "name": "Diamond"
+    },
+    {
+      "value": "Platinum",
+      "name": "Platinum"
+    },
+    {
+      "value": "Gold",
+      "name": "Gold"
+    },
+    {
+      "value": "Silver",
+      "name": "Silver"
+    },
+    {
+      "value": "Member",
+      "name": "Member"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+<div class="container">
+  <form [formGroup]="updateEmployee" (ngSubmit)="onSubmit()">
+    <div class="contentCreate" style="height: 764px">
+      <h4 class="text-center mb-2">Create Employee </h4>
+      <div class="row ">
+        <div class="col-6">
+          <div class="form-group">
+            <label for="id"><strong>Id Employee: </strong></label>
+            <input type="text" class="form-control" formControlName="id" id="id" placeholder="Enter id employee">
+            <div class="alert alert-danger" role="alert"
+              *ngIf="updateEmployee.get('employeeId')?.invalid && (updateEmployee.get('employeeId')?.touched || updateEmployee.get('employeeId')?.dirty)">
+              ID is required and must be NV-XXXX (0-9)
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="nameEmployee"><strong>Name Employee: </strong></label>
+            <input type="text" class="form-control" id="nameEmployee" formControlName="name"
+              placeholder="Enter Name Employee">
+            <div class="alert alert-danger" role="alert"
+              *ngIf="updateEmployee.get('employeeName')?.invalid && updateEmployee.get('employeeName')?.touched">
+              Name is required
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="birthday"><strong>Birth Employee: </strong></label>
+            <input type="date" class="form-control" formControlName="birthday" id="birthday">
+            <div class="alert alert-danger" role="alert"
+              *ngIf="updateEmployee.get('employeeBirthday').invalid && updateEmployee.get('employeeBirthday')?.touched">
+              Birthday is required
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="idcard">ID Card Employee</label>
+            <input type="number" formControlName="idCard" class="form-control" id="idcard">
+            <div class="alert alert-danger" role="alert"
+              *ngIf="updateEmployee.get('employeeIdCard')?.invalid && updateEmployee.get('employeeIdCard')?.touched">
+              ID Card is required
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="salary">Salary Employee</label>
+            <input type="number" formControlName="salary" class="form-control" id="salary">
+            <div class="alert alert-danger" role="alert"
+              *ngIf="updateEmployee.get('employeeSalary')?.invalid && updateEmployee.get('employeeSalary')?.touched">
+              Salary is required
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone </label>
+            <input type="number" formControlName="phone" class="form-control" id="phone">
+            <div class="alert alert-danger" role="alert"
+              *ngIf="updateEmployee.get('employeePhoneNumber')?.invalid && updateEmployee.get('employeePhoneNumber')?.touched">
+              Phone is required
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" formControlName="email" class="form-control" id="email">
+            <div class="alert alert-danger"
+              *ngIf="updateEmployee.get('employeeEmail')?.invalid && updateEmployee.get('employeeEmail')?.touched">
+              Email is required
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" formControlName="address" class="form-control" id="address">
+            <div class="alert alert-danger" role="alert"
+              *ngIf="updateEmployee.get('employeeAddress')?.invalid && updateEmployee.get('employeeAddress')?.touched">
+              Address is required
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="position">Position</label>
+            <select id="position" formControlName="positionId" class="form-control">
+              <option value="1">Lễ tân</option>
+              <option value="2">Phục vụ</option>
+              <option value="3">Chuyên viên</option>
+              <option value="4">Giám sát</option>
+              <option value="5">Quản lí</option>
+              <option value="6">Giám đốc</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="education">Education</label>
+            <select id="education" formControlName="eductionId" class="form-control">
+              <option value="1">Trung cấp</option>
+              <option value="2">Cao Đẳng</option>
+              <option value="3">Đại Học</option>
+              <option value="4">Sau Đại Học</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="division">Division</label>
+            <select id="division" formControlName="divisionId" class="form-control">
+              <option value="1">Sale - Marketing</option>
+              <option value="2">Hành chính</option>
+              <option value="3">Phục vụ</option>
+              <option value="4">Quản lí</option>
+            </select>
+          </div>
+          <input type="hidden" name="action">
+        </div>
+      </div>
+      <div class="row justify-content-center mt-4">
+        <a class=" btn btn-info mr-2">Back</a>
+        <a type="reset" class=" btn btn-dark mr-2">Reset</a>
+        <button type="submit" class="btn btn-success">Update
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

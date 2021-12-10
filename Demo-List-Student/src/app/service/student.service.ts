@@ -1,23 +1,25 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Student } from '../model/Student';
-import { studentRepo } from '../repository/StudentRepository';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StudentService {
 
-  students: Student[] = studentRepo;
+  students: Student[];
+  readonly API_URL = "http://localhost:3000/students";
   student: Student;
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
-  getAllStudents() {
-    return this.students;
+  getAllStudents(): Observable<Student[]> {
+    return this.httpClient.get<Student[]>(this.API_URL);
   }
 
-  addStudent(student: Student) {
-    this.students.push(student);
+  addStudent(student: Student): Observable<Student> {
+    return this.httpClient.post<Student>(this.API_URL, student);
   }
 
   getById(id: number) {

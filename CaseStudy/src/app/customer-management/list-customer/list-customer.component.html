@@ -1,0 +1,27 @@
+<div class="container">
+  <button class="btn btn-primary mt-2 mb-2" [routerLink]="['/create-customer']">New customer</button>
+  <table class="table table-striped table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Birthday</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of listCustomers">
+        <th scope="row">{{customer.id}}</th>
+        <td>{{customer.customerName}}</td>
+        <td>{{customer.customerBirthday}}</td>
+        <td>{{customer.customerGender}}</td>
+        <td>
+          <button class="btn btn-primary mr-2" [routerLink]="['/view-customer', customer.id]">View</button>
+          <button class="btn btn-warning mr-2" [routerLink]="['/update-customer', customer.id]">Update</button>
+          <button class="btn btn-danger mr-2" [routerLink]="['/delete-customer', customer.id]">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

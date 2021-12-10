@@ -1,4 +1,3 @@
-import { StudentService } from './service/student.service';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,6 +10,7 @@ import { StudentInformationComponent } from './student-information/student-infor
 import { StudentListComponent } from './student-list/student-list.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,9 +26,10 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [StudentService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

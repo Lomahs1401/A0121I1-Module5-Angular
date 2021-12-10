@@ -1,0 +1,51 @@
+footer {
+  background-color: rgb(173, 220, 207);
+}
+
+footer .container {
+  display: flex;
+}
+
+.container-left {
+  background: #ece3e3;
+  padding: 65px 45px 30px 45px;
+  margin-right: 80px;
+  flex: 2;
+}
+
+.container-left__color {
+  color: #cbbe73;
+}
+
+.map p a {
+  background: #046056;
+  color: lightgray;
+  font-size: 40px;
+  padding: 10px 40px 10px 15px;
+}
+
+.map p a:hover {
+  background: #046056;
+  color: white;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+.container-right {
+  padding: 65px 45px;
+  flex: 1.5;
+}
+
+.container-right__color {
+  color: #cbbe73;
+}
+
+.container-right p a {
+  color: black;
+}
+
+.container-right p a:hover {
+  text-decoration: none;
+  color: #046056;
+  font-weight: bold;
+}
